@@ -8,6 +8,7 @@ def post_test(*args, **kwargs):
 	return requests.post(*args, **kwargs).json()
 
 
+
 class RESTApiTestPost(unittest.TestCase):
 	def test_null_post(self):
 		response = post_test('http://localhost:5000/api/v1/users', json={}, headers={'Content-Type': 'application/json'})
